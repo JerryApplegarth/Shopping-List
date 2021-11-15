@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.shopping">
+    package="com.fourapplecompose.shopping">
 
     <application
-        android:name="com.example.shopping.Shopping"
+        android:name="com.fourapplecompose.shopping.Shopping"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shopping">
         <activity
-            android:name="com.example.shopping.MainActivity"
+            android:name="com.fourapplecompose.shopping.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Shopping.NoActionBar">
             <intent-filter>
