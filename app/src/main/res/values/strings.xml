@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Shopping</string>
+    <string name="app_name">The Grocery List</string>
     <string name="add_button">Add Button</string>
     <string name="search_action">Search Tasks</string>
     <string name="sort_action">Sort Task</string>
@@ -25,15 +25,9 @@
     <string name="delete_all_tasks_confirmation">Are you sure you want to remove all Task?
     There is no going back after this action.</string>
     <string name="to_do_logo">To-Do Logo</string>
-
-
-
-
-
-
-
-
-
+    <string name="apple_icon">apple icon</string>
+    <string name="applegarth_apps">Applegarth\'s Apps</string>
+    <string name="app_produced">This app produced by</string>
 
 
 </resources>
