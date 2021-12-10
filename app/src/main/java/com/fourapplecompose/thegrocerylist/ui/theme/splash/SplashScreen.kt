@@ -26,29 +26,9 @@ fun SplashScreen(
     navigateToListScreen: () -> Unit
 ) {
 
-    var startAnimation by remember {
-        mutableStateOf(false)
-
-    }
-
-    val offsetState by animateDpAsState(
-        targetValue = if (startAnimation) 0.dp else 300.dp,
-        animationSpec = tween(
-            durationMillis = 1000
-        )
-    )
-
-    val alphaState by animateFloatAsState(
-        targetValue = if (startAnimation) 1f else 0f,
-        animationSpec = tween(
-            durationMillis = 1000
-        )
-    )
-
-
 
     LaunchedEffect(key1 = true) {
-        startAnimation = true
+
         delay(4000)
         navigateToListScreen()
 
@@ -71,9 +51,11 @@ fun SplashScreen(
             text = stringResource(R.string.applegarth_apps),
             fontWeight = FontWeight.Bold,
 
-        )
-        Image(painter = painterResource(
-            id = R.drawable.four_apple_small),
+            )
+        Image(
+            painter = painterResource(
+                id = R.drawable.four_apple_small
+            ),
             contentDescription = stringResource(R.string.apple_icon),
             Modifier.size(30.dp)
         )
@@ -81,7 +63,6 @@ fun SplashScreen(
     }
 
 }
-
 
 
 @Preview(showSystemUi = true)
