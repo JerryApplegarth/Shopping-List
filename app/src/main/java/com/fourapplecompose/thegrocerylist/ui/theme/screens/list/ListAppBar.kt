@@ -1,8 +1,6 @@
 package com.fourapplecompose.thegrocerylist.ui.theme.screens.list
 
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
@@ -18,6 +16,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.fourapplecompose.thegrocerylist.R
 import com.fourapplecompose.thegrocerylist.components.DisplayAlertDialog
 import com.fourapplecompose.thegrocerylist.components.PriorityItem
@@ -116,7 +115,9 @@ fun ListAppBarAction(
 
 
     SearchAction(onSearchClicked = onSearchClicked)
+    Spacer(modifier = Modifier.width(16.dp))
     SortAction(onSortClicked = onSortClicked)
+    Spacer(modifier = Modifier.width(16.dp))
     DeleteAllAction(
         onDeleteAllConfirmed = { openDialog = true })
 
@@ -316,18 +317,18 @@ fun SearchAppBar(
 
 }
 
-@Preview
-@Composable
-fun SearchAppBarPreview() {
-    SearchAppBar(
-        text = "",
-        onTextChange = {},
-        onCloseClicked = {},
-        onSearchClicked = {}
-    )
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun SearchAppBarPreview() {
+//    SearchAppBar(
+//        text = "",
+//        onTextChange = {},
+//        onCloseClicked = {},
+//        onSearchClicked = {}
+//    )
+//}
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 private fun DefaultListAppBarPreview() {
     DefaultListAppBar(
