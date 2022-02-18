@@ -1,5 +1,6 @@
 package com.fourapplecompose.thegrocerylist.ui.theme.screens.task
 
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -7,9 +8,11 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.fourapplecompose.thegrocerylist.R
 import com.fourapplecompose.thegrocerylist.components.DisplayAlertDialog
 import com.fourapplecompose.thegrocerylist.data.models.Priority
@@ -163,11 +166,18 @@ fun ExistingTaskAppBarActions(
         onYesClicked = { navigateToListScreen(Action.DELETE) }
     )
 
+    Row(
 
-    DeleteAction(onDeleteClicked = {
-        openDialog = true
-    })
-    UpdateAction(onUpdateClicked = navigateToListScreen)
+    ) {
+        DeleteAction(onDeleteClicked = {
+            openDialog = true
+        })
+        Spacer(modifier = Modifier.width(36.dp))
+        UpdateAction(onUpdateClicked = navigateToListScreen)
+
+    }
+
+
 
 }
 
@@ -184,7 +194,9 @@ fun DeleteAction(
             imageVector = Icons.Filled.Delete,
             contentDescription = stringResource(
                 id = R.string.delete_icon
+
             ),
+
             tint = MaterialTheme.colors.topAppBarContentColor
         )
 
@@ -210,13 +222,13 @@ fun UpdateAction(
 
 }
 
-@Preview
-@Composable
-fun NewTaskAppBarPreview() {
-    NewTaskAppBar(
-        navigateToListScreen = {}
-    )
-}
+//@Preview
+//@Composable
+//fun NewTaskAppBarPreview() {
+//    NewTaskAppBar(
+//        navigateToListScreen = {}
+//    )
+//}
 
 @Preview
 @Composable

@@ -197,6 +197,7 @@ fun RedBackground(degrees: Float) {
     ) {
         Icon(
             modifier = Modifier
+                .padding(end = 36.dp)
                 .rotate(degrees = degrees),
             imageVector = Icons.Filled.Delete,
             contentDescription = stringResource(id = R.string.delete_icon),

@@ -317,23 +317,23 @@ fun SearchAppBar(
 
 }
 
-//@Preview(showBackground = true)
-//@Composable
-//fun SearchAppBarPreview() {
-//    SearchAppBar(
-//        text = "",
-//        onTextChange = {},
-//        onCloseClicked = {},
-//        onSearchClicked = {}
-//    )
-//}
-
 @Preview(showBackground = true)
 @Composable
-private fun DefaultListAppBarPreview() {
-    DefaultListAppBar(
-        onSearchClicked = {},
-        onSortClicked = {},
-        onDeleteAllConfirmed = {}
+fun SearchAppBarPreview() {
+    SearchAppBar(
+        text = "",
+        onTextChange = {},
+        onCloseClicked = {},
+        onSearchClicked = {}
     )
 }
+
+//@Preview(showBackground = true)
+//@Composable
+//private fun DefaultListAppBarPreview() {
+//    DefaultListAppBar(
+//        onSearchClicked = {},
+//        onSortClicked = {},
+//        onDeleteAllConfirmed = {}
+//    )
+//}
